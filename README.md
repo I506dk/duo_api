@@ -6,6 +6,7 @@
 ## Features
 - Create alias for admin users in Duo linking their standard and administrator accounts
 - Specify an organizational unit as the searchbase instead of all domain users
+- Optionally save the integration key, secret key, and api hostname to file using Microsoft's Data Protection API (DPAPI)
 
 ## Dependencies
 - [Pywin32](https://pypi.org/project/pywin32/) - Python for Window Extensions
@@ -45,33 +46,29 @@ Arguments can be specified to the script if an automated installation is wanted.
 (***-h or --help***) - will display the help screen.
 
 - Examples: ```python duo_api.py -h``` or ```python duo_api.py --help```
+(***-i or --ikey***) - the integration key of the Duo Admin API.
 
-(***-s or --server***)  - the hostname of the SQL server to connect to.
+- Examples: ```python duo_api.py -i``` or ```python duo_api.py --ikey```
+(***-s or --skey***)  - the secret key of the Duo Admin API.
 
-- Examples: ```python ssad.py -s``` or ```python ssad.py --server```
+- Examples: ```python duo_api.py -s``` or ```python duo_api.py --skey```
+(***-a or --api***) - the api hostname of the Duo tenant.
 
-(***-d or --database***) - the name of the database Secret Server should use. ('SecretServer' is generally the default)
+- Examples: ```python duo_api.py -a``` or ```python duo_api.py --api```
+(***-n or --notation***) - the naming convention used to denote an administrator account.
 
-- Examples: ```python ssad.py -d``` or ```python ssad.py --database```
+- Examples: ```python duo_api.py -n``` or ```python duo_api.py --notation```
+(***-o or --ou***) - the organizational to search for users in Active Directory.
 
-(***-u or --username***) - the username of the service account used to connect to the SQL database. Username should be in the format 'domain\username'.
+- Examples: ```python duo_api.py -o``` or ```python duo_api.py --ou```
 
-- Examples: ```python ssad.py -u``` or ```python ssad.py --username```
-
-(***-p or --password***) - the password for the service account being used to connect to SQL.
-
-- Examples: ```python ssad.py -p``` or ```python ssad.py --password```
-
-(***-a or --administrator***) - the password for the local administrator account created in Secret Server.
-
-- Examples: ```python ssad.py -a``` or ```python ssad.py --administrator```
 
 REMINDER - You can use multiple arguments as long as they aren't -h or --help (Those will default to showing the help screen then exiting)
 
 Example run using arguments:
 ```
-python ssad.py -s my-sql-server -d SecretServer -u test.domain\service_account -p service_password -a admin_password
+python duo_api.py -i DIxxxxxxxx -s I5xxxxxxxxx -a api-xxxxxx.duosecurity.com -n _admin -o Marketing_OU
 ```
 
 ## To Do
-- [ ] Create function to remotely install and configure MS SQL (SQL express, and SQL Dev versions)
+- [ ] Add additional functionality to support future processes
