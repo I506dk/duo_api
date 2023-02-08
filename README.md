@@ -1,7 +1,8 @@
 # Duo API
 
-#### A python script to interact with the Duo Admin API
+![cisco-duo-subs](https://user-images.githubusercontent.com/33561466/217649691-dbf155b0-123c-4c04-a0ea-a2e68eb70f80.png)
 
+#### A python script to interact with the Duo Admin API
 
 ## Features
 - Create alias for admin users in Duo linking their standard and administrator accounts
