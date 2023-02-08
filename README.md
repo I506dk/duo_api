@@ -59,7 +59,7 @@ Arguments can be specified to the script if an automated installation is wanted.
 (***-n or --notation***) - the naming convention used to denote an administrator account.
 - Examples: ```python duo_api.py -n``` or ```python duo_api.py --notation```
 
-(***-o or --ou***) - the organizational to search for users in Active Directory.
+(***-o or --ou***) - the organizational unit to search for users in Active Directory.
 - Examples: ```python duo_api.py -o``` or ```python duo_api.py --ou```
 
 
