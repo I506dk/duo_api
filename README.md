@@ -44,22 +44,21 @@ This will create aliases for administrator accounts in active directory to link 
 Arguments can be specified to the script if an automated installation is wanted.
 
 (***-h or --help***) - will display the help screen.
-
 - Examples: ```python duo_api.py -h``` or ```python duo_api.py --help```
+
 (***-i or --ikey***) - the integration key of the Duo Admin API.
-
 - Examples: ```python duo_api.py -i``` or ```python duo_api.py --ikey```
+
 (***-s or --skey***)  - the secret key of the Duo Admin API.
-
 - Examples: ```python duo_api.py -s``` or ```python duo_api.py --skey```
+
 (***-a or --api***) - the api hostname of the Duo tenant.
-
 - Examples: ```python duo_api.py -a``` or ```python duo_api.py --api```
+
 (***-n or --notation***) - the naming convention used to denote an administrator account.
-
 - Examples: ```python duo_api.py -n``` or ```python duo_api.py --notation```
-(***-o or --ou***) - the organizational to search for users in Active Directory.
 
+(***-o or --ou***) - the organizational to search for users in Active Directory.
 - Examples: ```python duo_api.py -o``` or ```python duo_api.py --ou```
 
 
