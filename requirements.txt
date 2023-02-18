@@ -1,3 +1,4 @@
 duo-client>=4.5.0
 pandas>=1.5.3
 pywin32>=305
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
